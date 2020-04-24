@@ -1,0 +1,2 @@
+rootProject.name='Hate_Alcohol'
+include ':app'
