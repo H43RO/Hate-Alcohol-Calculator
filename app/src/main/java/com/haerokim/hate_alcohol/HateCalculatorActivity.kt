@@ -10,11 +10,12 @@ class HateCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hate_calculator)
-        var count = 0
+        var people = 0
 
         seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {
                 count_member.setText(count.toString())
+                people = count
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -23,5 +24,7 @@ class HateCalculatorActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
             }
         })
+
+
     }
 }
