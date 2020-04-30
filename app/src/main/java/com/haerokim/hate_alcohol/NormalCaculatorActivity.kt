@@ -56,7 +56,6 @@ class NormalCaculatorActivity : AppCompatActivity() {
                 }
         })
 
-
         var result: String
         var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         var clipData: ClipData
@@ -66,7 +65,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
             clipData = ClipData.newPlainText("TOTAL", result)
             clipboardManager.primaryClip = clipData
 
-            Toast.makeText(this, "복사되었습니다.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "복사되었습니다!", Toast.LENGTH_LONG).show()
             Log.d("Check","CHECKING")
 
         }
