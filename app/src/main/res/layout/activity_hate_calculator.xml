@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".HateCalculatorActivity">
 
+
     <SeekBar
         android:id="@+id/seekBar_hate"
         android:layout_width="match_parent"
@@ -116,45 +117,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_soju" />
 
     <TextView
-        android:id="@+id/sum_text_view_hate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="300dp"
-        android:text="0원"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.262" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
-        android:text="나는"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_sum_hate" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginBottom="240dp"
-        android:text="결과를 터치하면 복사할 수 있습니다"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sum_text_view_hate"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -175,6 +137,70 @@
         app:layout_constraintStart_toEndOf="@+id/price_beer"
         app:layout_constraintTop_toTopOf="@+id/price_beer" />
 
+
+    <NumberPicker
+        android:id="@+id/soju_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_soju"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="맥주 잔 수"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/soju_picker"
+        app:layout_constraintEnd_toEndOf="@+id/soju_picker"
+        app:layout_constraintStart_toStartOf="@+id/soju_picker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="소맥 잔 수"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/somek_picker"
+        app:layout_constraintEnd_toEndOf="@+id/somek_picker"
+        app:layout_constraintStart_toStartOf="@+id/somek_picker" />
+
+    <NumberPicker
+        android:id="@+id/beer_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/soju_picker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_soju"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <NumberPicker
+        android:id="@+id/somek_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/soju_picker"
+        app:layout_constraintTop_toBottomOf="@+id/price_soju"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="소주 잔 수"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/beer_picker"
+        app:layout_constraintEnd_toEndOf="@+id/beer_picker"
+        app:layout_constraintStart_toStartOf="@+id/beer_picker" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
