@@ -13,7 +13,7 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import kotlinx.android.synthetic.main.activity_hate_calculator.*
 import kotlinx.android.synthetic.main.activity_hate_calculator.count_member
-import kotlinx.android.synthetic.main.activity_hate_calculator.seekBar
+import kotlinx.android.synthetic.main.activity_hate_calculator.seekBar_hate
 import kotlinx.android.synthetic.main.activity_normal_caculator.*
 
 class NormalCaculatorActivity : AppCompatActivity() {
@@ -51,8 +51,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
                     total /= people
                     sum_text_view.text = total.toString() + "원"
                 } else {
-                    Toast.makeText(this@NormalCaculatorActivity, "금액을 입력해주세요", Toast.LENGTH_LONG)
-                        .show()
+                    Toast.makeText(this@NormalCaculatorActivity, "금액을 입력해주세요", Toast.LENGTH_SHORT).show()
                 }
         })
 

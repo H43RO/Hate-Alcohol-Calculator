@@ -12,7 +12,7 @@ class HateCalculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hate_calculator)
         var people = 0
 
-        seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+        seekBar_hate.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {
                 count_member.setText(count.toString())
                 people = count
