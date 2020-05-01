@@ -37,10 +37,5 @@ class HateCalculatorActivity : AppCompatActivity() {
 
 
 
-        soju_picker.setOnValueChangedListener { numberPicker, i, i2 ->
-            Log.d("Test_picker",numberPicker.value.toString())
-        }
-
-
     }
 }
