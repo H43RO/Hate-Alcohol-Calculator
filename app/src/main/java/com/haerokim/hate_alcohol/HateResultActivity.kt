@@ -12,5 +12,8 @@ class HateResultActivity : AppCompatActivity() {
 
         val intent: Intent = getIntent()
 
+
+
+
     }
 }

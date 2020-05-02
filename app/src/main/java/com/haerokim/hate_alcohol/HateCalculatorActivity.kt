@@ -74,7 +74,7 @@ class HateCalculatorActivity : AppCompatActivity() {
             beer_sum = beer_picker.value
             somek_sum = somek_picker.value
 
-            if (price_soju.text.toString() != "" && price_beer.text.toString() != "") {
+            if (price_soju.text.toString() != "" && price_beer.text.toString() != "" && total_sum_hate.text.toString() != "") {
                 soju_price = Integer.parseInt(price_soju.text.toString())
                 beer_price = Integer.parseInt(price_beer.text.toString())
 
@@ -89,10 +89,19 @@ class HateCalculatorActivity : AppCompatActivity() {
 
                 startActivity(intent)
 
+//                Log.d("intent_test", people.toString())
+//                Log.d("intent_test", total_anju.toString())
+//                Log.d("intent_test", soju_price.toString())
+//                Log.d("intent_test", beer_price.toString())
+//                Log.d("intent_test", soju_sum.toString())
+//                Log.d("intent_test", beer_sum.toString())
+//                Log.d("intent_test", somek_sum.toString())
+
+
             } else {
                 Toast.makeText(
                     this@HateCalculatorActivity,
-                    "소주 및 맥주 금액을 입력해주세요",
+                    "금액 정보를 모두 입력해주세요",
                     Toast.LENGTH_SHORT
                 ).show()
             }

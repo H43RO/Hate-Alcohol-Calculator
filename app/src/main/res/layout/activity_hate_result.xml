@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".HateResultActivity">
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
