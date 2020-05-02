@@ -202,5 +202,16 @@
         app:layout_constraintEnd_toEndOf="@+id/beer_picker"
         app:layout_constraintStart_toStartOf="@+id/beer_picker" />
 
+    <Button
+        android:id="@+id/final_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="다음 >"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
