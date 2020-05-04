@@ -1,10 +1,15 @@
 package com.haerokim.hate_alcohol
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_hate_result.*
+import kotlinx.android.synthetic.main.activity_normal_caculator.*
 
 class HateResultActivity : AppCompatActivity() {
 
@@ -15,6 +20,8 @@ class HateResultActivity : AppCompatActivity() {
     var total_anju: Int = 0
     var soju_price: Int = 0
     var beer_price: Int = 0
+
+    var hate_result: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,15 +37,27 @@ class HateResultActivity : AppCompatActivity() {
         soju_price = intent.extras.getInt("soju_price")
         beer_price = intent.extras.getInt("beer_price")
 
+        hate_result =
+            (total_anju / people) + (soju_sum * (soju_price / 8)) +
+                    (beer_sum * (beer_price / 3)) + (somek_sum * (soju_price / 8 + beer_price / 2))
 
-        button.setOnClickListener {
-            Log.d("intent_test2", people.toString())
-            Log.d("intent_test2", total_anju.toString())
-            Log.d("intent_test2", soju_price.toString())
-            Log.d("intent_test2", beer_price.toString())
-            Log.d("intent_test2", soju_sum.toString())
-            Log.d("intent_test2", beer_sum.toString())
-            Log.d("intent_test2", somek_sum.toString())
+        Log.d("result_text", hate_result.toString())
+        hate_sum_text_view.text = hate_result.toString() + "원"
+
+
+
+        var result: String
+        var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        var clipData: ClipData
+
+        sum_text_view.setOnClickListener() {
+            result = hate_sum_text_view.text.toString()
+            clipData = ClipData.newPlainText("TOTAL", result)
+            clipboardManager.primaryClip = clipData
+
+            Toast.makeText(this, "복사되었습니다!", Toast.LENGTH_LONG).show()
+            Log.d("Check","CHECKING")
+
         }
 
 

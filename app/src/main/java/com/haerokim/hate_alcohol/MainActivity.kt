@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         goto_normal_calc.setOnClickListener {
             startActivity(Intent(this, NormalCaculatorActivity::class.java))
         }
@@ -20,7 +19,5 @@ class MainActivity : AppCompatActivity() {
         goto_hate_calc.setOnClickListener {
             startActivity(Intent(this, HateCalculatorActivity::class.java))
         }
-
     }
-
 }
