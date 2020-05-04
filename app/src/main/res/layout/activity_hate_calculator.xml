@@ -210,8 +210,20 @@
         android:layout_marginBottom="24dp"
         android:text="다음 >"
         android:textSize="20dp"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textSize="20dp"
+        android:text="술찌는 10잔 이상 못먹습니다."
+        app:layout_constraintBottom_toBottomOf="@+id/final_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/final_button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

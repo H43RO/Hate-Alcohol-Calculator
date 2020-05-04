@@ -89,15 +89,6 @@ class HateCalculatorActivity : AppCompatActivity() {
 
                 startActivity(intent)
 
-//                Log.d("intent_test", people.toString())
-//                Log.d("intent_test", total_anju.toString())
-//                Log.d("intent_test", soju_price.toString())
-//                Log.d("intent_test", beer_price.toString())
-//                Log.d("intent_test", soju_sum.toString())
-//                Log.d("intent_test", beer_sum.toString())
-//                Log.d("intent_test", somek_sum.toString())
-
-
             } else {
                 Toast.makeText(
                     this@HateCalculatorActivity,
