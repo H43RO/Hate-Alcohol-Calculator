@@ -39,7 +39,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
             }
         })
 
-        total_sum.addTextChangedListener(object : TextWatcher {
+        total_sum_edit_text.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
             }
 
@@ -47,8 +47,8 @@ class NormalCaculatorActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) =
-                if (total_sum.text.toString() != "") {
-                    total = Integer.parseInt(total_sum.text.toString())
+                if (total_sum_edit_text.text.toString() != "") {
+                    total = Integer.parseInt(total_sum_edit_text.text.toString())
                     total /= people
                     sum_text_view.text = total.toString() + "원"
                 } else {
