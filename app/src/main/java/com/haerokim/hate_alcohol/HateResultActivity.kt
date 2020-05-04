@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_hate_result.*
 import kotlinx.android.synthetic.main.activity_normal_caculator.*
 
@@ -55,9 +56,7 @@ class HateResultActivity : AppCompatActivity() {
             clipData = ClipData.newPlainText("TOTAL", result)
             clipboardManager.primaryClip = clipData
 
-            Toast.makeText(this, "복사되었습니다!", Toast.LENGTH_LONG).show()
-            Log.d("Check","CHECKING")
-
+            Snackbar.make(hate_result_layout, "복사되었습니다!", Snackbar.LENGTH_LONG).show()
         }
 
 

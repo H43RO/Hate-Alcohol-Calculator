@@ -11,6 +11,7 @@ import android.util.Log
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_hate_calculator.*
 import kotlinx.android.synthetic.main.activity_hate_calculator.count_member
 import kotlinx.android.synthetic.main.activity_hate_calculator.seekBar_hate
@@ -64,9 +65,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
             clipData = ClipData.newPlainText("TOTAL", result)
             clipboardManager.primaryClip = clipData
 
-            Toast.makeText(this, "복사되었습니다!", Toast.LENGTH_LONG).show()
-            Log.d("Check","CHECKING")
-
+            Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG).show()
         }
 
     }
