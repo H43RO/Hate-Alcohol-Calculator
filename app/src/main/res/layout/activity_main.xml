@@ -7,7 +7,6 @@
     android:background="#F3F3F3"
     tools:context=".MainActivity">
 
-
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -15,12 +14,17 @@
         android:background="@color/cardview_dark_background"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_margin="16dp"
-        android:layout_below="@+id/title"
         android:id="@+id/main_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_result" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/goto_normal_calc"
