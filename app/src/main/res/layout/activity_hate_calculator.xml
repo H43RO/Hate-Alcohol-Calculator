@@ -80,6 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/total_sum_hate" />
 
     <EditText
+        android:hint="금액 입력"
         android:id="@+id/price_soju"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -105,6 +106,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
+        android:hint="금액 입력"
         android:id="@+id/price_beer"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -202,7 +204,8 @@
         app:layout_constraintEnd_toEndOf="@+id/beer_picker"
         app:layout_constraintStart_toStartOf="@+id/beer_picker" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:id="@+id/final_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -210,7 +213,6 @@
         android:layout_marginBottom="24dp"
         android:text="다음 >"
         android:textSize="20dp"
-        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

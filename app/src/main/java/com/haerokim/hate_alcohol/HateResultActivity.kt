@@ -51,7 +51,7 @@ class HateResultActivity : AppCompatActivity() {
         var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         var clipData: ClipData
 
-        sum_text_view.setOnClickListener() {
+        hate_sum_text_view.setOnClickListener() {
             result = hate_sum_text_view.text.toString()
             clipData = ClipData.newPlainText("TOTAL", result)
             clipboardManager.primaryClip = clipData

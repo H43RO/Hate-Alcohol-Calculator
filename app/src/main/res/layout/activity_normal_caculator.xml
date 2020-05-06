@@ -7,6 +7,35 @@
     android:id="@+id/normal_layout"
     tools:context=".HateCalculatorActivity">
 
+    <RelativeLayout
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:id="@+id/normal_title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#868686"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/title_text"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일반 계산기"/>
+
+        <TextView
+            android:layout_below="@+id/title_text"
+            android:textColor="#C0C0C0"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="간편하게 술값을 N빵 합니다"/>
+
+    </RelativeLayout>
+
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
@@ -26,43 +55,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="술자리 참가 인원 : "
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/normal_title" />
 
     <TextView
         android:id="@+id/count_member"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="0명"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/text"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/normal_title" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/total_sum_input"
+    <EditText
+        android:id="@+id/total_sum_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="총 계산 금액"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar">
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/total_sum_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:hint="총 계산 금액"
-            android:inputType="number" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
 
     <TextView
@@ -75,7 +98,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_sum_input" />
+        app:layout_constraintTop_toBottomOf="@+id/total_sum_edit_text" />
 
     <TextView
         android:id="@+id/sum_text_view"
@@ -87,7 +110,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
