@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, HateCalculatorActivity::class.java))
         }
 
-        var resultList : List<Result> = listOf()
+        var resultList : List<Result> = listOf(Result("20000원","2020.05.05"), Result("15000원", "2020.04.15"))
 
         viewManager = LinearLayoutManager(this)
         viewAdapter = RecyclerAdapter(resultList)
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    data class Result(val sum : String, val date:String)
+    data class Result(val price : String, val date:String)
 
     class RecyclerAdapter(private val myDataset: List<Result>) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -73,8 +73,12 @@ class MainActivity : AppCompatActivity() {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
-            val textView = holder.view.findViewById<TextView>(R.id.result_price)
-            textView.text = myDataset[position].sum
+            val price = holder.view.findViewById<TextView>(R.id.result_price)
+            price.text = myDataset[position].price
+
+            val date = holder.view.findViewById<TextView>(R.id.result_date)
+            date.text = myDataset[position].date
+
         }
 
         // Return the size of your dataset (invoked by the layout manager)

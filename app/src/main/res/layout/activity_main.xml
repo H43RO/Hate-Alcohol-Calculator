@@ -8,29 +8,37 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:padding="24dp"
+        android:gravity="center_vertical"
         android:id="@+id/title"
         android:layout_width="match_parent"
+        android:elevation="4dp"
         android:layout_height="200dp"
-        android:background="@color/cardview_dark_background"/>
+        android:background="@color/cardview_dark_background" >
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="2"
-        tools:listitem="@layout/item_result" />
+        <TextView
+            android:id="@+id/text1"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="안 내도 괜찮잖아?"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:text="우리는 술값을 다 내지 않아도 됩니다."
+            android:textColor="#B3B3B3"/>
+
+    </RelativeLayout>
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/goto_normal_calc"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_below="@+id/main_recycler"
+        android:layout_below="@+id/title"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
@@ -43,38 +51,35 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:gravity="center"
                 android:id="@+id/normal_title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:gravity="center"
                 android:text="일반 계산기"
                 android:textSize="30dp"
-                android:layout_margin="16dp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:background="#B2B2B2"
-                android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@+id/normal_title_text"
+                android:layout_alignParentBottom="true"
+                android:background="#B2B2B2"
                 android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:layout_below="@+id/normal_title_text">
+                android:orientation="vertical">
 
                 <TextView
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="간단한 술값 계산을 합니다"/>
+                    android:layout_marginLeft="16dp"
+                    android:text="간단한 술값 계산을 합니다"
+                    android:textColor="#ffffff" />
 
             </LinearLayout>
 
-
         </RelativeLayout>
-
-
 
     </androidx.cardview.widget.CardView>
 
@@ -88,43 +93,55 @@
         android:layout_marginRight="16dp"
         android:elevation="4dp"
         app:cardCornerRadius="4dp">
+
         <RelativeLayout
             android:id="@+id/menu2_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:gravity="center"
                 android:id="@+id/hate_title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:gravity="center"
                 android:text="술찌 계산기"
                 android:textSize="30dp"
-                android:layout_margin="16dp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:background="#B2B2B2"
-                android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@+id/hate_title_text"
+                android:layout_alignParentBottom="true"
+                android:background="#B2B2B2"
                 android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:layout_below="@+id/hate_title_text">
+                android:orientation="vertical">
 
                 <TextView
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="정밀한 술값 계산을 합니다"/>
+                    android:layout_marginLeft="16dp"
+                    android:text="정밀한 술값 계산을 합니다"
+                    android:textColor="#ffffff" />
 
             </LinearLayout>
-
-
         </RelativeLayout>
 
-
     </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/goto_hate_calc"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_result" />
 </RelativeLayout>
