@@ -5,7 +5,7 @@
     android:id="@+id/normal_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F6F6F6"
+    android:background="#F3F3F3"
     android:focusableInTouchMode="true"
     tools:context=".HateCalculatorActivity">
 
