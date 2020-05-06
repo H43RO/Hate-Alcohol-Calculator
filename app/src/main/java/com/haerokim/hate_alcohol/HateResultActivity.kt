@@ -11,6 +11,7 @@ import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_hate_result.*
 import kotlinx.android.synthetic.main.activity_normal_caculator.*
+import java.util.*
 
 class HateResultActivity : AppCompatActivity() {
 
@@ -44,6 +45,9 @@ class HateResultActivity : AppCompatActivity() {
 
         Log.d("result_text", hate_result.toString())
         hate_sum_text_view.text = hate_result.toString() + "원"
+
+
+        hate_result
 
 
 
