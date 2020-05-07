@@ -3,11 +3,13 @@ package com.haerokim.hate_alcohol
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
@@ -20,6 +22,15 @@ import kotlinx.android.synthetic.main.activity_normal_caculator.*
 class NormalCaculatorActivity : AppCompatActivity() {
     var people = 2
     var total: Int = 1000
+
+    inner class SaveButtonListener(val result : String ) : View.OnClickListener{
+        override fun onClick(v: View?) {
+            val intent = Intent(this@NormalCaculatorActivity, MainActivity::class.java)
+            intent.putExtra("result", result)
+            startActivity(intent)
+        }
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,7 +76,9 @@ class NormalCaculatorActivity : AppCompatActivity() {
             clipData = ClipData.newPlainText("TOTAL", result)
             clipboardManager.primaryClip = clipData
 
-            Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG).show()
+            Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
+                .setAction("저장", SaveButtonListener(result))
+                .show()
         }
 
     }

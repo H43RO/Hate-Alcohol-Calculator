@@ -47,7 +47,7 @@ class HateResultActivity : AppCompatActivity() {
         hate_sum_text_view.text = hate_result.toString() + "원"
 
 
-        hate_result
+
 
 
 
