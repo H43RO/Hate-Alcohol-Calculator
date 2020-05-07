@@ -40,27 +40,40 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, HateCalculatorActivity::class.java))
         }
 
-        if (intent.getStringExtra("result") != null) {
+        storeList = Paper.book().read("data", mutableListOf<Result>())
+        resultList = storeList
+        viewAdapter = RecyclerAdapter(resultList)
 
+        recyclerView = findViewById<RecyclerView>(R.id.main_recycler).apply {
+            setHasFixedSize(true)
+            adapter = viewAdapter
+        }
+
+        if (intent.getStringExtra("result") != null) {
             //Get current time-date format
             current_date = Calendar.getInstance().time
             simpleDateFormat = SimpleDateFormat("yyyy-MM-dd hh:mm")
             getTime = simpleDateFormat.format(current_date)
-            Log.d("date", getTime)
 
             getResult = intent.getStringExtra("result")
-            resultList.add(Result(getResult, getTime))
+            resultList.add(0,Result(getResult, getTime))
             Paper.book().write("data", resultList)
+            viewAdapter.notifyDataSetChanged()
         }
 
         storeList = Paper.book().read("data", mutableListOf<Result>())
         viewAdapter = RecyclerAdapter(storeList)
-        Log.d("count_item",viewAdapter.itemCount.toString())
+
         recyclerView = findViewById<RecyclerView>(R.id.main_recycler).apply {
             setHasFixedSize(true)
             adapter = viewAdapter
-
         }
+
+
+
+        Log.d("count_item",viewAdapter.itemCount.toString())
+
+
     }
 
     data class Result(val price: String, val date: String)

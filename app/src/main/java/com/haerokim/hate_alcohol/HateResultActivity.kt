@@ -48,9 +48,6 @@ class HateResultActivity : AppCompatActivity() {
 
 
 
-
-
-
         var result: String
         var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         var clipData: ClipData
