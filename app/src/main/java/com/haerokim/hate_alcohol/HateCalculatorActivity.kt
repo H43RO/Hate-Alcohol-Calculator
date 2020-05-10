@@ -64,11 +64,6 @@ class HateCalculatorActivity : AppCompatActivity() {
                 }
         })
 
-        //사람 수
-        //총 계산 안주 가격
-        //소주 한병 가격, 맥주 한병 가격
-        //소주 잔, 맥주 잔, 소맥 잔 수
-
         final_button.setOnClickListener {
             soju_sum = soju_picker.value
             beer_sum = beer_picker.value
