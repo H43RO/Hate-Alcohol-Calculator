@@ -1,45 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/hate_result_layout"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#F3F3F3"
     tools:context=".HateResultActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="인당"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/hate_sum_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/hate_sum_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0원"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginBottom="240dp"
-        android:text="결과를 터치하면 복사할 수 있습니다"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sum_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/total_sum_input">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="인당"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/hate_sum_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="0원"
+                android:textSize="60dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/hate_sum_text_view"
+                android:layout_marginTop="16dp"
+                android:background="#626262"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="결과를 터치하면 복사할 수 있습니다"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
