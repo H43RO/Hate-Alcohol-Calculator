@@ -79,7 +79,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
             Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
                 .setAction("저장", SaveButtonListener(result))
                 .show()
-        }
 
+        }
     }
 }
