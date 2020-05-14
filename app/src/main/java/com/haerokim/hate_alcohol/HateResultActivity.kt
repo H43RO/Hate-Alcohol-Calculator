@@ -7,6 +7,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_hate_result.*
@@ -25,9 +26,20 @@ class HateResultActivity : AppCompatActivity() {
 
     var hate_result: Int = 0
 
+
+    inner class SaveButtonListener(val result: String) : View.OnClickListener {
+        override fun onClick(v: View?) {
+            val intent = Intent(this@HateResultActivity, MainActivity::class.java)
+            intent.putExtra("hate_result", result)
+            startActivity(intent)
+        }
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hate_result)
+
 
         val intent: Intent = getIntent()
 
@@ -47,9 +59,9 @@ class HateResultActivity : AppCompatActivity() {
         hate_sum_text_view.text = hate_result.toString() + "원"
 
 
-
         var result: String
-        var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        var clipboardManager: ClipboardManager =
+            getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         var clipData: ClipData
 
         hate_sum_text_view.setOnClickListener() {
@@ -57,7 +69,9 @@ class HateResultActivity : AppCompatActivity() {
             clipData = ClipData.newPlainText("TOTAL", result)
             clipboardManager.primaryClip = clipData
 
-            Snackbar.make(hate_result_layout, "복사되었습니다!", Snackbar.LENGTH_LONG).show()
+            Snackbar.make(hate_result_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
+                .setAction("저장", SaveButtonListener(result))
+                .show()
         }
 
 

@@ -9,9 +9,6 @@
     android:background="#F3F3F3"
     tools:context=".HateResultActivity">
 
-
-
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="198dp"
@@ -70,8 +67,6 @@
 
 
         </RelativeLayout>
-
-
     </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

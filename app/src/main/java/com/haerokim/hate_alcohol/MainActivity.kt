@@ -61,6 +61,21 @@ class MainActivity : AppCompatActivity() {
             viewAdapter.notifyDataSetChanged()
         }
 
+
+        if (intent.getStringExtra("hate_result") != null) {
+            //Get current time-date format
+            current_date = Calendar.getInstance().time
+            simpleDateFormat = SimpleDateFormat("yyyy-MM-dd hh:mm")
+            getTime = simpleDateFormat.format(current_date)
+
+            getResult = intent.getStringExtra("hate_result")
+            resultList.add(0,Result(getResult, getTime))
+            Paper.book().write("data", resultList)
+            viewAdapter.notifyDataSetChanged()
+        }
+
+
+
         storeList = Paper.book().read("data", mutableListOf<Result>())
         viewAdapter = RecyclerAdapter(storeList)
 
