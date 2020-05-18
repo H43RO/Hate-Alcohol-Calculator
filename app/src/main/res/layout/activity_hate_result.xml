@@ -11,15 +11,12 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="198dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:elevation="8dp"
-        app:cardCornerRadius="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_sum_input">
+        app:cardCornerRadius="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,7 +26,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
                 android:text="인당"
                 android:textSize="30dp" />
@@ -39,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center_horizontal"
                 android:text="0원"
                 android:textSize="60dp"
@@ -49,7 +46,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/hate_sum_text_view"
-                android:layout_marginTop="16dp"
                 android:background="#626262"
                 android:orientation="horizontal"
                 android:padding="8dp">
@@ -64,8 +60,6 @@
 
 
             </LinearLayout>
-
-
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 

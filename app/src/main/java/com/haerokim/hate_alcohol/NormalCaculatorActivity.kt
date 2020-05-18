@@ -8,15 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_hate_calculator.*
 import kotlinx.android.synthetic.main.activity_hate_calculator.count_member
-import kotlinx.android.synthetic.main.activity_hate_calculator.seekBar_hate
 import kotlinx.android.synthetic.main.activity_normal_caculator.*
 
 class NormalCaculatorActivity : AppCompatActivity() {
