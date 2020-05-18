@@ -34,7 +34,7 @@
             android:layout_below="@+id/title_text"
             android:text="간편하게 술값을 N빵 합니다"
             android:textColor="#C0C0C0"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
     </RelativeLayout>
 
