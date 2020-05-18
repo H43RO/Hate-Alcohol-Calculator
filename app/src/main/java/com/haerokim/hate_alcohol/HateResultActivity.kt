@@ -52,8 +52,7 @@ class HateResultActivity : AppCompatActivity() {
         beer_price = intent.extras.getInt("beer_price")
 
         hate_result =
-            (total_anju / people) + (soju_sum * (soju_price / 8)) +
-                    (beer_sum * (beer_price / 3)) + (somek_sum * (soju_price / 8 + beer_price / 2))
+            (total_anju / people) + (soju_sum * (soju_price / 8)) + (beer_sum * (beer_price / 3)) + (somek_sum * (soju_price / 8 + beer_price / 2))
 
         Log.d("result_text", hate_result.toString())
         hate_sum_text_view.text = hate_result.toString() + "원"

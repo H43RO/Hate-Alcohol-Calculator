@@ -1,179 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#F3F3F3"
     tools:context=".HateCalculatorActivity">
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
+        android:id="@+id/hate_title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FF424242"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="술찌 계산기"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:textSize="15dp"
+            android:textColor="#C0C0C0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_text"
+            android:text="한 치의 오차없이 술값을 계산합니다"/>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/section1"
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="250dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#ffffff"
+        android:elevation="8dp"
+        app:cardCornerRadius="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
+
 
             <TextView
                 android:id="@+id/text_people"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="술자리 참가 인원 : "
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
+            <TextView
+                android:id="@+id/count_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/text_people"
+                android:text="0원"
+                android:textSize="15dp" />
 
             <SeekBar
                 android:id="@+id/seekBar_hate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_people"
-                android:layout_marginEnd="8dp"
-                android:max="30"
-                android:min="2"
-                android:progress="0" />
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="18dp"
+                android:max="20"
+                android:min="2" />
 
-            <TextView
-                android:id="@+id/count_member"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_people"
-                android:layout_alignParentTop="true"
-                android:text="0명"
-                android:textSize="20dp"
-                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/text_input_anju"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/seekBar_hate">
+                android:layout_below="@+id/seekBar_hate"
+                android:layout_marginTop="16dp">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/total_sum_hate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="나온 금액을 입력하세요"
-                    android:inputType="number" />
-
+                    android:hint="총 안주 값을 입력하세요" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_input_anju"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_price_soju"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/price_soju"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="소주 한 병에 (원)" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_price_beer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/price_beer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="맥주 한 병에 (원)" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/section2"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp">
+        android:layout_height="200dp"
+        android:layout_below="@+id/section1"
+        android:layout_margin="8dp"
+        android:background="#ffffff"
+        android:elevation="8dp"
+        app:cardCornerRadius="4dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical">
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/price_field"
+            <LinearLayout
+                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-
-                <EditText
-                    android:id="@+id/price_soju"
-                    android:layout_width="150dp"
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/head1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="맥주 금액 입력"
-                    android:inputType="number" />
-
-                <EditText
-                    android:id="@+id/price_beer"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="맥주 금액 입력"
-                    android:inputType="number"/>
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="소주 잔 수"
+                    android:textSize="15dp" />
 
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/head2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="1dp"
-                    android:text="원"
-                    android:textSize="20dp" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="맥주 잔 수"
+                    android:textSize="15dp" />
+
 
                 <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/head3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="원"
-                    android:textSize="20dp" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="소맥 잔 수"
+                    android:textSize="15dp" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+                <NumberPicker
+                    android:layout_weight="1"
+                    android:id="@+id/soju_picker"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_height="120dp"/>
 
+                <NumberPicker
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/section3"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp">
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:id="@+id/beer_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical">
+                <NumberPicker
 
-            <TextView
-                android:id="@+id/head1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="소주 잔 수"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:id="@+id/somek_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"/>
 
-            <NumberPicker
-                android:id="@+id/soju_picker"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:layout_below="@+id/head1" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="맥주 잔 수"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="149dp"
-                tools:layout_editor_absoluteY="357dp" />
-
-
-            <NumberPicker
-                android:id="@+id/beer_picker"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp" />
+        </LinearLayout>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="소맥 잔 수"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
-
-            <NumberPicker
-                android:id="@+id/somek_picker"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp" />
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
     <com.google.android.material.button.MaterialButton
@@ -181,8 +255,10 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/section2"
+        android:layout_alignParentRight="true"
         android:text="다음"
         android:textSize="20dp" />
 
 
-</LinearLayout>
+</RelativeLayout>

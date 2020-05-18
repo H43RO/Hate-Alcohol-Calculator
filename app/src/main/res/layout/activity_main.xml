@@ -18,11 +18,11 @@
 
         <TextView
             android:id="@+id/text1"
-            android:textColor="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="안 내도 괜찮잖아?"/>
+            android:text="다 안 내도 괜찮잖아요"
+            android:textColor="#fff"
+            android:textSize="30dp" />
 
         <TextView
             android:layout_width="match_parent"
