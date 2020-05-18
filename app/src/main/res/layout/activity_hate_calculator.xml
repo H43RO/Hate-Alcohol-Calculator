@@ -19,23 +19,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_marginTop="32dp"
-            android:layout_marginLeft="8dp"
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
             android:text="술찌 계산기"
             android:textColor="#ffffff"
             android:textSize="30dp" />
 
         <TextView
-            android:layout_marginLeft="8dp"
-            android:textSize="15dp"
-            android:textColor="#C0C0C0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
-            android:text="한 치의 오차없이 술값을 계산합니다"/>
+            android:layout_marginLeft="8dp"
+            android:text="한 치의 오차없이 술값을 계산합니다"
+            android:textColor="#C0C0C0"
+            android:textSize="15dp" />
 
 
     </RelativeLayout>
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@+id/text_people"
-                android:text="0원"
+                android:text="0명"
                 android:textSize="15dp" />
 
             <SeekBar
@@ -99,6 +99,7 @@
                     android:id="@+id/total_sum_hate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#F6F6F6"
                     android:hint="총 안주 값을 입력하세요" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -122,6 +123,7 @@
                         android:id="@+id/price_soju"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="#E1E1E1"
                         android:hint="소주 한 병에 (원)" />
 
 
@@ -141,6 +143,7 @@
                         android:id="@+id/price_beer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="#E1E1E1"
                         android:hint="맥주 한 병에 (원)" />
 
 
@@ -170,78 +173,78 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
                 android:padding="16dp">
 
                 <TextView
-                    android:textStyle="bold"
                     android:id="@+id/head1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="소주 잔 수"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
 
                 <TextView
-                    android:textStyle="bold"
                     android:id="@+id/head2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="맥주 잔 수"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
 
                 <TextView
-                    android:textStyle="bold"
                     android:id="@+id/head3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="소맥 잔 수"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
 
                 <NumberPicker
-                    android:layout_weight="1"
                     android:id="@+id/soju_picker"
                     android:layout_width="0dp"
+                    android:layout_height="120dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_height="120dp"/>
+                    android:layout_weight="1" />
 
                 <NumberPicker
 
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
                     android:id="@+id/beer_picker"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"/>
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1" />
 
                 <NumberPicker
 
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
                     android:id="@+id/somek_picker"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"/>
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1" />
 
             </LinearLayout>
 

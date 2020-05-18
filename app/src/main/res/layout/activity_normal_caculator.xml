@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@+id/text_people"
-                android:text="0원"
+                android:text="0명"
                 android:textSize="15dp" />
 
             <SeekBar
@@ -97,10 +97,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/total_sum_edit_text"
                     android:layout_width="match_parent"
+                    android:background="#F6F6F6"
                     android:layout_height="wrap_content"
                     android:hint="총 안주 값을 입력하세요" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
         </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
