@@ -95,7 +95,6 @@
                 android:layout_below="@+id/seekBar_hate"
                 android:layout_marginTop="16dp"
                 app:boxBackgroundColor="#F6F6F6"
-                app:boxStrokeColor="#6B6B6B"
                 app:boxStrokeErrorColor="@color/errorStroke"
                 app:errorIconTint="@color/errorIconTint">
 
@@ -147,7 +146,6 @@
                     app:boxStrokeColor="#6B6B6B"
                     app:boxStrokeErrorColor="@color/errorStroke"
                     app:errorIconTint="@color/errorIconTint">
-
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/price_beer"

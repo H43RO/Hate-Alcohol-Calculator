@@ -11,6 +11,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_hate_calculator.count_member
 import kotlinx.android.synthetic.main.activity_normal_caculator.*
