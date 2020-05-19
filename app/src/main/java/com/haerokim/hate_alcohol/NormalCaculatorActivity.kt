@@ -57,7 +57,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
                     total /= people
                     sum_text_view.text = total.toString() + "원"
                 } else {
-                    Toast.makeText(this@NormalCaculatorActivity, "금액을 입력해주세요", Toast.LENGTH_SHORT).show()
+                    total_sum_edit_text.setError("금액을 입력해주세요")
                 }
         })
 
@@ -65,15 +65,25 @@ class NormalCaculatorActivity : AppCompatActivity() {
         var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         var clipData: ClipData
 
-        sum_text_view.setOnClickListener() {
-            result = sum_text_view.text.toString()
-            clipData = ClipData.newPlainText("TOTAL", result)
-            clipboardManager.primaryClip = clipData
+        sum_text_view.setOnClickListener {
 
-            Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
-                .setAction("저장", SaveButtonListener(result))
-                .show()
+            if(sum_text_view.text.toString() == "0원"){
+                total_sum_edit_text.setError("금액을 입력해주세요")
+                Toast.makeText(
+                    this,
+                    "정보를 모두 입력해주세요",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else{
+                result = sum_text_view.text.toString()
 
+                clipData = ClipData.newPlainText("TOTAL", result)
+                clipboardManager.primaryClip = clipData
+
+                Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
+                    .setAction("저장", SaveButtonListener(result))
+                    .show()
+            }
         }
     }
 }

@@ -92,14 +92,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/seekBar"
+                app:errorIconTint="@color/errorIconTint"
+                app:boxStrokeErrorColor="@color/errorStroke"
+                app:boxStrokeColor="#6B6B6B"
+                app:boxBackgroundColor="#F6F6F6"
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/total_sum_edit_text"
                     android:layout_width="match_parent"
-                    android:background="#F6F6F6"
-                    android:layout_height="wrap_content"
-                    android:hint="총 안주 값을 입력하세요" />
+                    android:layout_height="match_parent"
+                    android:hint="총 술값을 입력하세요" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -93,13 +93,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/seekBar_hate"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                app:boxBackgroundColor="#F6F6F6"
+                app:boxStrokeColor="#6B6B6B"
+                app:boxStrokeErrorColor="@color/errorStroke"
+                app:errorIconTint="@color/errorIconTint">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/total_sum_hate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#F6F6F6"
                     android:hint="총 안주 값을 입력하세요" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -112,18 +115,21 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/text_input_price_soju"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="4dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:boxStrokeColor="#6B6B6B"
+                    app:boxStrokeErrorColor="@color/errorStroke"
+                    app:errorIconTint="@color/errorIconTint">
 
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/price_soju"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#E1E1E1"
                         android:hint="소주 한 병에 (원)" />
 
 
@@ -132,18 +138,21 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/text_input_price_beer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:boxStrokeColor="#6B6B6B"
+                    app:boxStrokeErrorColor="@color/errorStroke"
+                    app:errorIconTint="@color/errorIconTint">
 
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/price_beer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#E1E1E1"
                         android:hint="맥주 한 병에 (원)" />
 
 

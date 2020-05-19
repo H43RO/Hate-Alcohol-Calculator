@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.SeekBar
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_hate_calculator.*
@@ -85,6 +84,18 @@ class HateCalculatorActivity : AppCompatActivity() {
                 startActivity(intent)
 
             } else {
+                if(price_soju.text.toString() == ""){
+                    price_soju.setError("소주 금액을 입력해주세요")
+                }
+
+                if(price_beer.text.toString() == ""){
+                    price_beer.setError("맥주 금액을 입력해주세요")
+                }
+
+                if(total_sum_hate.text.toString() == ""){
+                    total_sum_hate.setError("안주 금액을 입력해주세요")
+                }
+
                 Toast.makeText(
                     this@HateCalculatorActivity,
                     "정보를 모두 입력해주세요",
