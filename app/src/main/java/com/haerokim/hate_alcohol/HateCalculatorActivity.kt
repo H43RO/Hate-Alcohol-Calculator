@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_hate_calculator.*
@@ -63,47 +64,48 @@ class HateCalculatorActivity : AppCompatActivity() {
                 }
         })
 
-        final_button.setOnClickListener {
-            soju_sum = soju_picker.value
-            beer_sum = beer_picker.value
-            somek_sum = somek_picker.value
-
-            if (people != 0 && price_soju.text.toString() != "" && price_beer.text.toString() != "" && total_sum_hate.text.toString() != "") {
-                soju_price = Integer.parseInt(price_soju.text.toString())
-                beer_price = Integer.parseInt(price_beer.text.toString())
-
-                val intent: Intent = Intent(this, HateResultActivity::class.java)
-                intent.putExtra("people", people)
-                intent.putExtra("total_anju", total_anju)
-                intent.putExtra("soju_price", soju_price)
-                intent.putExtra("beer_price", beer_price)
-                intent.putExtra("soju_sum", soju_sum)
-                intent.putExtra("beer_sum", beer_sum)
-                intent.putExtra("somek_sum", somek_sum)
-
-                startActivity(intent)
-
-            } else {
-                if(price_soju.text.toString() == ""){
-                    price_soju.setError("소주 금액을 입력해주세요")
-                }
-
-                if(price_beer.text.toString() == ""){
-                    price_beer.setError("맥주 금액을 입력해주세요")
-                }
-
-                if(total_sum_hate.text.toString() == ""){
-                    total_sum_hate.setError("안주 금액을 입력해주세요")
-                }
-
-                Toast.makeText(
-                    this@HateCalculatorActivity,
-                    "정보를 모두 입력해주세요",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        }
-
-
     }
+
+    fun onClickFinalButton(view : View) {
+        soju_sum = soju_picker.value
+        beer_sum = beer_picker.value
+        somek_sum = somek_picker.value
+
+        if (people != 0 && price_soju.text.toString() != "" && price_beer.text.toString() != "" && total_sum_hate.text.toString() != "") {
+            soju_price = Integer.parseInt(price_soju.text.toString())
+            beer_price = Integer.parseInt(price_beer.text.toString())
+
+            val intent: Intent = Intent(this, HateResultActivity::class.java)
+            intent.putExtra("people", people)
+            intent.putExtra("total_anju", total_anju)
+            intent.putExtra("soju_price", soju_price)
+            intent.putExtra("beer_price", beer_price)
+            intent.putExtra("soju_sum", soju_sum)
+            intent.putExtra("beer_sum", beer_sum)
+            intent.putExtra("somek_sum", somek_sum)
+
+            startActivity(intent)
+
+        } else {
+            if(price_soju.text.toString() == ""){
+                price_soju.setError("소주 금액을 입력해주세요")
+            }
+
+            if(price_beer.text.toString() == ""){
+                price_beer.setError("맥주 금액을 입력해주세요")
+            }
+
+            if(total_sum_hate.text.toString() == ""){
+                total_sum_hate.setError("안주 금액을 입력해주세요")
+            }
+
+            Toast.makeText(
+                this@HateCalculatorActivity,
+                "정보를 모두 입력해주세요",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+
 }

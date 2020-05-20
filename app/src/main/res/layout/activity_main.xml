@@ -34,6 +34,7 @@
     </RelativeLayout>
 
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/goto_normal_calc"
         android:layout_width="match_parent"
@@ -66,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/normal_title_text"
                 android:layout_alignParentBottom="true"
-                android:background="#B2B2B2"
+                android:background="#A4A4A4"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -115,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/hate_title_text"
                 android:layout_alignParentBottom="true"
-                android:background="#B2B2B2"
+                android:background="#A4A4A4"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
