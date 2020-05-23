@@ -154,7 +154,7 @@
         android:layout_below="@+id/conscience_result_card_view"
         android:layout_margin="16dp"
         android:gravity="end"
-        android:text="" />
+        android:text="*결과를 참고하여 적당한 절충점을 찾아보세요" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
