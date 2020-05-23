@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
-            android:text="간편하게 술값을 N빵 합니다"
+            android:text="미안하니까 그냥 술값을 N빵 합니다"
             android:textColor="#C0C0C0"
             android:textSize="15dp" />
 
