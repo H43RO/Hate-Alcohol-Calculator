@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/hate_result_title"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="200dp"
         android:background="#424C6A"
         android:gravity="center_vertical"
         android:padding="24dp"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
-                android:text="인당"
+                android:text="나는"
                 android:textSize="30dp" />
 
             <TextView
@@ -131,12 +131,12 @@
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="양심얹기"
+                android:text="나머지 사람들은"
                 android:textSize="18dp" />
 
 
             <TextView
-                android:id="@+id/conscience_result"
+                android:id="@+id/another_people_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -154,7 +154,7 @@
         android:layout_below="@+id/conscience_result_card_view"
         android:layout_margin="16dp"
         android:gravity="end"
-        android:text="우리는 무려 1000원의 양심을 챙긴 착한술찌입니다" />
+        android:text="" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

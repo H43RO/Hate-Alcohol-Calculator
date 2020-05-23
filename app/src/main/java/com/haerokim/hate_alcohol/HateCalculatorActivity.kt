@@ -21,6 +21,7 @@ class HateCalculatorActivity : AppCompatActivity() {
     var total_anju: Int = 0
     var soju_price: Int = 0
     var beer_price: Int = 0
+    var receipt_price:Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +65,8 @@ class HateCalculatorActivity : AppCompatActivity() {
                 }
         })
 
+
+
     }
 
     fun onClickFinalButton(view : View) {
@@ -71,9 +74,13 @@ class HateCalculatorActivity : AppCompatActivity() {
         beer_sum = beer_picker.value
         somek_sum = somek_picker.value
 
-        if (people != 0 && price_soju.text.toString() != "" && price_beer.text.toString() != "" && total_sum_hate.text.toString() != "") {
+
+
+        if (people != 0 && price_soju.text.toString() != "" && price_beer.text.toString() != "" &&
+            total_sum_hate.text.toString() != "" && receipt_sum_hate.text.toString() != "") {
             soju_price = Integer.parseInt(price_soju.text.toString())
             beer_price = Integer.parseInt(price_beer.text.toString())
+            receipt_price = Integer.parseInt(receipt_sum_hate.text.toString())
 
             val intent: Intent = Intent(this, HateResultActivity::class.java)
             intent.putExtra("people", people)
@@ -83,6 +90,7 @@ class HateCalculatorActivity : AppCompatActivity() {
             intent.putExtra("soju_sum", soju_sum)
             intent.putExtra("beer_sum", beer_sum)
             intent.putExtra("somek_sum", somek_sum)
+            intent.putExtra("receipt", receipt_price)
 
             startActivity(intent)
 
@@ -97,6 +105,10 @@ class HateCalculatorActivity : AppCompatActivity() {
 
             if(total_sum_hate.text.toString() == ""){
                 total_sum_hate.setError("안주 금액을 입력해주세요")
+            }
+
+            if(receipt_sum_hate.text.toString() == ""){
+                receipt_sum_hate.setError("영수증에 찍힌 금액을 입력해주세요")
             }
 
             Toast.makeText(

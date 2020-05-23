@@ -23,6 +23,7 @@ class HateResultActivity : AppCompatActivity() {
     var total_anju: Int = 0
     var soju_price: Int = 0
     var beer_price: Int = 0
+    var receipt: Int = 0
 
     var hate_result: Int = 0
 
@@ -55,13 +56,14 @@ class HateResultActivity : AppCompatActivity() {
         total_anju = intent.extras.getInt("total_anju")
         soju_price = intent.extras.getInt("soju_price")
         beer_price = intent.extras.getInt("beer_price")
+        receipt = intent.extras.getInt("receipt")
 
         hate_result =
             (total_anju / people) + (soju_sum * (soju_price / 8)) + (beer_sum * (beer_price / 3)) + (somek_sum * (soju_price / 8 + beer_price / 2))
 
         Log.d("result_text", hate_result.toString())
         hate_sum_text_view.text = hate_result.toString() + "원"
-        conscience_result.text = (hate_result + 1000).toString() + "원"
+        another_people_result.text = ((receipt - hate_result) / (people - 1)).toString() + "원"
 
 
         var result: String

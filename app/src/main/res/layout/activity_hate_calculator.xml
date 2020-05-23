@@ -60,7 +60,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-
             <TextView
                 android:id="@+id/text_people"
                 android:layout_width="wrap_content"
@@ -89,30 +88,59 @@
                 android:max="20"
                 android:min="2" />
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_anju"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/price_field"
                 android:layout_below="@+id/seekBar_hate"
-                android:layout_marginTop="16dp"
-                app:boxBackgroundColor="#F6F6F6"
-                app:boxStrokeErrorColor="@color/errorStroke"
-                app:errorIconTint="@color/errorIconTint">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/total_sum_hate"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_anju"
                     android:layout_width="match_parent"
-                    android:inputType="number"
                     android:layout_height="wrap_content"
-                    android:hint="총 안주 값을 입력하세요" />
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="4dp"
+                    app:boxBackgroundColor="#F6F6F6"
+                    app:boxStrokeErrorColor="@color/errorStroke"
+                    app:errorIconTint="@color/errorIconTint">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/total_sum_hate"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:layout_height="wrap_content"
+                        android:hint="안주값만 합한 금액" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="4dp"
+                    app:boxBackgroundColor="#F6F6F6"
+                    app:boxStrokeErrorColor="@color/errorStroke"
+                    app:errorIconTint="@color/errorIconTint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/receipt_sum_hate"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:layout_height="wrap_content"
+                        android:hint="영수증에 찍힌 총 금액" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/text_input_anju"
+                android:layout_below="@+id/price_field"
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
