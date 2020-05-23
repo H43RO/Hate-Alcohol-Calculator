@@ -19,12 +19,15 @@
         <TextView
             android:id="@+id/text1"
             android:layout_width="match_parent"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:text="다 안 내도 괜찮잖아요"
             android:textColor="#fff"
             android:textSize="30dp" />
 
         <TextView
+            android:textSize="18dp"
+            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text1"
@@ -75,7 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="간단하게 술값 계산을 합니다"
+                    android:text="일반적인 술값 계산을 합니다."
                     android:textColor="#ffffff" />
 
             </LinearLayout>
@@ -124,7 +127,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="정밀한 술값 계산을 합니다"
+                    android:text="술찌들의 술값 계산을 합니다."
                     android:textColor="#ffffff" />
 
             </LinearLayout>

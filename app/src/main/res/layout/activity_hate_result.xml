@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/hate_result_layout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
     tools:context=".HateResultActivity">
@@ -14,7 +14,7 @@
         android:layout_height="230dp"
         android:background="#424C6A"
         android:gravity="center_vertical"
-        android:padding="16dp"
+        android:padding="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,17 +25,18 @@
             android:layout_height="wrap_content"
             android:text="한가지 명심하세요."
             android:textColor="#ffffff"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text1"
-            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
+            android:layout_marginTop="16dp"
             android:text="술자리에 따라 미움을 살 수도 있습니다."
             android:textColor="#C0C0C0"
-            android:textSize="15dp" />
+            android:textSize="18dp" />
 
 
         <TextView
@@ -44,16 +45,16 @@
             android:layout_below="@+id/text1"
             android:text="친한 사이에서나 통하는 계산입니다."
             android:textColor="#C0C0C0"
-            android:textSize="15dp" />
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_below="@+id/hate_result_title"
         android:id="@+id/result_card_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_below="@+id/hate_result_title"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -78,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_horizontal"
                 android:text="0원"
@@ -90,13 +92,13 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/hate_sum_text_view"
                 android:background="#8E95AB"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:text="결과를 터치하면 복사할 수 있습니다"
                     android:textColor="#ffffff"
                     android:textSize="15dp" />
@@ -108,10 +110,10 @@
 
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_below="@+id/result_card_view"
         android:id="@+id/conscience_result_card_view"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_below="@+id/result_card_view"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -119,40 +121,40 @@
         app:cardCornerRadius="4dp">
 
         <RelativeLayout
-            android:gravity="center_vertical"
-            android:background="#FFFFFF"
             android:layout_width="match_parent"
-            android:padding="16dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:padding="16dp">
 
             <TextView
-                android:textSize="18dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/text3"
-                android:text="양심얹기"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="양심얹기"
+                android:textSize="18dp" />
 
 
             <TextView
-                android:textStyle="bold"
-                android:layout_alignParentRight="true"
-                android:textSize="18dp"
+                android:id="@+id/conscience_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/conscience_result"
-                android:text="0원"/>
+                android:layout_alignParentRight="true"
+                android:text="0원"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
-       </RelativeLayout>
+        </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:layout_below="@+id/conscience_result_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/conscience_result_card_view"
+        android:layout_margin="16dp"
         android:gravity="end"
-        android:text="우리는 무려 1000원의 양심을 챙긴 착한술찌입니다"
-        android:layout_margin="16dp"/>
+        android:text="우리는 무려 1000원의 양심을 챙긴 착한술찌입니다" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -161,12 +163,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:backgroundTint="#848484"
         android:clickable="true"
         android:onClick="onClickHomeButton"
-        android:backgroundTint="#848484"
-        app:tint="#ffffff"
-        app:srcCompat="@drawable/ic_home"
         app:borderWidth="0dp"
-        app:useCompatPadding="true"/>
+        app:srcCompat="@drawable/ic_home"
+        app:tint="#ffffff"
+        app:useCompatPadding="true" />
 
 </RelativeLayout>

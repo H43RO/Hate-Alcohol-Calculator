@@ -15,12 +15,13 @@
         android:layout_height="200dp"
         android:background="#424C6A"
         android:gravity="center_vertical"
-        android:padding="16dp"
+        android:padding="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:textStyle="bold"
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,9 +33,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
-            android:text="미안하니까 그냥 술값을 N빵 합니다"
+            android:layout_marginTop="8dp"
+            android:text="그냥 인원수 대로 술값을 N빵 합니다."
             android:textColor="#C0C0C0"
-            android:textSize="15dp" />
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
@@ -136,6 +138,7 @@
                 android:textSize="30dp" />
 
             <TextView
+                android:layout_marginTop="16dp"
                 android:id="@+id/sum_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -153,12 +156,12 @@
                 android:layout_below="@+id/sum_text_view"
                 android:background="#8E95AB"
                 android:orientation="horizontal"
-                android:padding="8dp">
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:text="결과를 터치하면 복사할 수 있습니다"
                     android:textColor="#ffffff"
                     android:textSize="15dp" />

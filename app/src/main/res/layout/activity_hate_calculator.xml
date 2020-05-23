@@ -20,10 +20,11 @@
 
         <TextView
             android:id="@+id/title_text"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="36dp"
             android:text="술찌 계산기"
             android:textColor="#ffffff"
             android:textSize="30dp" />
@@ -33,9 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
             android:layout_marginLeft="8dp"
-            android:text="한 치의 오차없이 술값을 계산합니다"
+            android:layout_marginTop="8dp"
+            android:text="한 치의 오차없이 마신만큼 술값을 계산합니다"
             android:textColor="#C0C0C0"
-            android:textSize="15dp" />
+            android:textSize="18dp" />
 
 
     </RelativeLayout>
@@ -45,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="150dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="#ffffff"

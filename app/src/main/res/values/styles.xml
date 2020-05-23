@@ -7,8 +7,13 @@
         <item name="colorPrimaryDark">#424C6A</item>
         <item name="colorAccent">#39425F</item>
         <item name="android:textColorPrimary">#212121</item>
-    </style>
 
+        <item name="android:textViewStyle">@style/customTextViewFontStyle</item>
+        <item name="android:buttonStyle">@style/customButtonFontStyle</item>
+        <item name="android:editTextStyle">@style/customEditTextFontStyle</item>
+        <item name="android:radioButtonStyle">@style/customRadioButtonFontStyle</item>
+        <item name="android:checkboxStyle">@style/customCheckboxFontStyle</item>
+    </style>
 
 
 </resources>
