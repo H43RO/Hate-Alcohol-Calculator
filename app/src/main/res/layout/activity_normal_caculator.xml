@@ -69,6 +69,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:textStyle="bold"
                 android:id="@+id/count_member"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

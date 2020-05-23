@@ -36,6 +36,7 @@ class HateCalculatorActivity : AppCompatActivity() {
         somek_picker.minValue = 0
         somek_picker.maxValue = 10
 
+        Toast.makeText(this,"정보를 모두 입력해주세요",Toast.LENGTH_LONG).show()
 
         seekBar_hate.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {

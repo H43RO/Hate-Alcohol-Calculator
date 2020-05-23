@@ -32,6 +32,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_normal_caculator)
 
+
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {
                 count_member.setText(count.toString()+"명")
