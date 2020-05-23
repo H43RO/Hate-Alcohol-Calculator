@@ -161,6 +161,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:text="4000"
                         android:hint="소주 한 병에 (원)" />
 
 
@@ -183,6 +184,7 @@
                         android:id="@+id/price_beer"
                         android:layout_width="match_parent"
                         android:inputType="number"
+                        android:text="4000"
                         android:layout_height="wrap_content"
                         android:hint="맥주 한 병에 (원)" />
 

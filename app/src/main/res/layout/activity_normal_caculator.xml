@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="match_parent"
-                    android:hint="총 술값을 입력하세요" />
+                    android:hint="영수증에 찍힌 총 금액을 입력하세요" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

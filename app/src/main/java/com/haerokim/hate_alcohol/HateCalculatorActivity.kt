@@ -36,6 +36,7 @@ class HateCalculatorActivity : AppCompatActivity() {
         somek_picker.minValue = 0
         somek_picker.maxValue = 10
 
+
         seekBar_hate.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {
                 count_member.setText(count.toString()+"명")
@@ -96,11 +97,11 @@ class HateCalculatorActivity : AppCompatActivity() {
 
         } else {
             if(price_soju.text.toString() == ""){
-                price_soju.setError("소주 금액을 입력해주세요")
+                price_soju.setError("소주 가격을 입력해주세요")
             }
 
             if(price_beer.text.toString() == ""){
-                price_beer.setError("맥주 금액을 입력해주세요")
+                price_beer.setError("맥주 가격을 입력해주세요")
             }
 
             if(total_sum_hate.text.toString() == ""){
