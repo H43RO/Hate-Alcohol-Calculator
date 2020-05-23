@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/hate_result_layout"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#F3F3F3"
     tools:context=".HateResultActivity">
-
-
 
     <RelativeLayout
         android:id="@+id/hate_result_title"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#FF424242"
+        android:layout_height="230dp"
+        android:background="#424C6A"
         android:gravity="center_vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +29,7 @@
 
         <TextView
             android:id="@+id/text1"
+            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
@@ -52,6 +50,8 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        android:layout_below="@+id/hate_result_title"
+        android:id="@+id/result_card_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginStart="16dp"
@@ -81,6 +81,7 @@
                 android:layout_marginBottom="16dp"
                 android:gravity="center_horizontal"
                 android:text="0원"
+                android:textColor="#3A3A3A"
                 android:textSize="60dp"
                 android:textStyle="bold" />
 
@@ -88,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/hate_sum_text_view"
-                android:background="#626262"
+                android:background="#8E95AB"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
@@ -107,6 +108,8 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        android:layout_below="@+id/result_card_view"
+        android:id="@+id/conscience_result_card_view"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
@@ -144,6 +147,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
+        android:layout_below="@+id/conscience_result_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
@@ -151,12 +155,12 @@
         android:layout_margin="16dp"/>
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/final_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:clickable="true"
         android:onClick="onClickHomeButton"
         android:backgroundTint="#848484"
@@ -165,4 +169,4 @@
         app:borderWidth="0dp"
         app:useCompatPadding="true"/>
 
-</LinearLayout>
+</RelativeLayout>

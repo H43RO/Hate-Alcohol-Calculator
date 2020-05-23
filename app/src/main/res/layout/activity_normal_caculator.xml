@@ -13,7 +13,7 @@
         android:id="@+id/normal_title"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#FF424242"
+        android:background="#424C6A"
         android:gravity="center_vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,6 +143,7 @@
                 android:layout_marginBottom="16dp"
                 android:gravity="center_horizontal"
                 android:text="0원"
+                android:textColor="#3A3A3A"
                 android:textSize="60dp"
                 android:textStyle="bold" />
 
@@ -150,7 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/sum_text_view"
-                android:background="#626262"
+                android:background="#8E95AB"
                 android:orientation="horizontal"
                 android:padding="8dp">
 

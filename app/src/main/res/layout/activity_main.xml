@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:elevation="4dp"
         android:layout_height="200dp"
-        android:background="@color/cardview_dark_background" >
+        android:background="#424C6A" >
 
         <TextView
             android:id="@+id/text1"
@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/normal_title_text"
                 android:layout_alignParentBottom="true"
-                android:background="#A4A4A4"
+                android:background="#8E95AB"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/hate_title_text"
                 android:layout_alignParentBottom="true"
-                android:background="#A4A4A4"
+                android:background="#8E95AB"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 

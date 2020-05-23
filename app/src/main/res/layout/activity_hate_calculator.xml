@@ -12,7 +12,7 @@
         android:id="@+id/hate_title"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#FF424242"
+        android:background="#424C6A"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
