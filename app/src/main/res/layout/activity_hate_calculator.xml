@@ -101,6 +101,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/total_sum_hate"
                     android:layout_width="match_parent"
+                    android:inputType="number"
                     android:layout_height="wrap_content"
                     android:hint="총 안주 값을 입력하세요" />
 
@@ -129,6 +130,7 @@
                         android:id="@+id/price_soju"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:inputType="number"
                         android:hint="소주 한 병에 (원)" />
 
 
@@ -150,12 +152,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/price_beer"
                         android:layout_width="match_parent"
+                        android:inputType="number"
                         android:layout_height="wrap_content"
                         android:hint="맥주 한 병에 (원)" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
-
 
             </LinearLayout>
 

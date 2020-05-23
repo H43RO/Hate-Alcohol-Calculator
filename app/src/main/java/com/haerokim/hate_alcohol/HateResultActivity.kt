@@ -36,6 +36,11 @@ class HateResultActivity : AppCompatActivity() {
 
     }
 
+
+    fun onClickHomeButton(view : View) {
+       startActivity(Intent(this, MainActivity::class.java))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hate_result)
@@ -56,6 +61,7 @@ class HateResultActivity : AppCompatActivity() {
 
         Log.d("result_text", hate_result.toString())
         hate_sum_text_view.text = hate_result.toString() + "원"
+        conscience_result.text = (hate_result + 1000).toString() + "원"
 
 
         var result: String

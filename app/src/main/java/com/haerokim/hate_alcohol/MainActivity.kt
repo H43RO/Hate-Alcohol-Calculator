@@ -84,10 +84,7 @@ class MainActivity : AppCompatActivity() {
             adapter = viewAdapter
         }
 
-
-
         Log.d("count_item",viewAdapter.itemCount.toString())
-
 
     }
 
