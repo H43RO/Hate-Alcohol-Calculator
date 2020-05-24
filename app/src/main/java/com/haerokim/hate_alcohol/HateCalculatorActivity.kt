@@ -38,6 +38,9 @@ class HateCalculatorActivity : AppCompatActivity() {
 
         Toast.makeText(this,"정보를 모두 입력해주세요",Toast.LENGTH_LONG).show()
 
+
+        //술자리에 참여한 사람이 몇명인지 얻기 위한 SeekBar
+
         seekBar_hate.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {
                 count_member.setText(count.toString()+"명")
@@ -53,18 +56,26 @@ class HateCalculatorActivity : AppCompatActivity() {
 
     }
 
+
+    //최종 결과 페이지로 이동하는 Floating Action Button onCLickListener
+
     fun onClickFinalButton(view : View) {
         soju_sum = soju_picker.value
         beer_sum = beer_picker.value
         somek_sum = somek_picker.value
 
 
+        //만약 정보가 하나라도 기입되지 않았다면 EditText setError 발생
+
         if (people != 0 && price_soju.text.toString() != "" && price_beer.text.toString() != "" &&
             total_sum_hate.text.toString() != "" && receipt_sum_hate.text.toString() != "") {
+
             soju_price = Integer.parseInt(price_soju.text.toString())
             beer_price = Integer.parseInt(price_beer.text.toString())
             receipt_price = Integer.parseInt(receipt_sum_hate.text.toString())
             total_anju = Integer.parseInt(total_sum_hate.text.toString())
+
+            //정보가 잘 입력이 되었다면 입력 데이터 실어서 Result Activity로 Intent
 
             val intent: Intent = Intent(this, HateResultActivity::class.java)
             intent.putExtra("people", people)

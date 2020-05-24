@@ -20,6 +20,9 @@ class NormalCaculatorActivity : AppCompatActivity() {
     var people = 2
     var total: Int = 1000
 
+
+    //SnackBar ActionButton Listener - Saving result at MainActivity
+
     inner class SaveButtonListener(val result : String ) : View.OnClickListener{
         override fun onClick(v: View?) {
             val intent = Intent(this@NormalCaculatorActivity, MainActivity::class.java)
@@ -33,6 +36,8 @@ class NormalCaculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_normal_caculator)
 
 
+        //술자리에 참여한 사람이 몇명인지 얻기 위한 SeekBar
+
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, count: Int, p2: Boolean) {
                 count_member.setText(count.toString()+"명")
@@ -45,6 +50,8 @@ class NormalCaculatorActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
             }
         })
+
+        //총 술값(영수증에 찍힌 금액)을 얻기 위한 EditText Listener
 
         total_sum_edit_text.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
@@ -63,6 +70,8 @@ class NormalCaculatorActivity : AppCompatActivity() {
                 }
         })
 
+        //ClipBoard에 결과값을 복사
+
         var result: String
         var clipboardManager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         var clipData: ClipData
@@ -76,6 +85,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
                     "정보를 모두 입력해주세요",
                     Toast.LENGTH_SHORT
                 ).show()
+
             }else{
                 result = sum_text_view.text.toString()
 

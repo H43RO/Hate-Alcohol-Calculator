@@ -28,6 +28,8 @@ class HateResultActivity : AppCompatActivity() {
     var hate_result: Int = 0
 
 
+    //SnackBar ActionButton Listener - Saving result at MainActivity
+
     inner class SaveButtonListener(val result: String) : View.OnClickListener {
         override fun onClick(v: View?) {
             val intent = Intent(this@HateResultActivity, MainActivity::class.java)
@@ -37,14 +39,16 @@ class HateResultActivity : AppCompatActivity() {
 
     }
 
+    //저장 동작 없이 홈 화면으로 이동하기 위한 Floating Action Button onClickListener
+
     fun onClickHomeButton(view : View) {
        startActivity(Intent(this, MainActivity::class.java))
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hate_result)
-
 
         val intent: Intent = getIntent()
 
@@ -57,13 +61,18 @@ class HateResultActivity : AppCompatActivity() {
         beer_price = intent.extras.getInt("beer_price")
         receipt = intent.extras.getInt("receipt")
 
-        hate_result =
-            (total_anju / people) + (soju_sum * (soju_price / 8)) + (beer_sum * (beer_price / 3)) + (somek_sum * (soju_price / 8 + beer_price / 2))
+        //Intent시 함께 넘어온 데이터를 통해 최종 결과값 계산하여 setText
+
+        hate_result = (total_anju / people) + (soju_sum * (soju_price / 8)) + (beer_sum * (beer_price / 3)) +
+                      (somek_sum * (soju_price / 8 + beer_price / 2))
 
         Log.d("result_text", hate_result.toString())
         hate_sum_text_view.text = hate_result.toString() + "원"
         another_people_result.text = ((receipt - hate_result) / (people - 1)).toString() + "원"
 
+
+
+        //ClipBoard에 결과값을 복사
 
         var result: String
         var clipboardManager: ClipboardManager =
