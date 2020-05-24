@@ -51,24 +51,6 @@ class HateCalculatorActivity : AppCompatActivity() {
             }
         })
 
-        total_sum_hate.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(p0: Editable?) {
-            }
-
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) =
-                if (total_sum_hate.text.toString() != "") {
-                    total_anju = Integer.parseInt(total_sum_hate.text.toString())
-                } else {
-                    Toast.makeText(this@HateCalculatorActivity, "안주 금액을 입력해주세요", Toast.LENGTH_SHORT)
-                        .show()
-                }
-        })
-
-
-
     }
 
     fun onClickFinalButton(view : View) {
@@ -77,12 +59,12 @@ class HateCalculatorActivity : AppCompatActivity() {
         somek_sum = somek_picker.value
 
 
-
         if (people != 0 && price_soju.text.toString() != "" && price_beer.text.toString() != "" &&
             total_sum_hate.text.toString() != "" && receipt_sum_hate.text.toString() != "") {
             soju_price = Integer.parseInt(price_soju.text.toString())
             beer_price = Integer.parseInt(price_beer.text.toString())
             receipt_price = Integer.parseInt(receipt_sum_hate.text.toString())
+            total_anju = Integer.parseInt(total_sum_hate.text.toString())
 
             val intent: Intent = Intent(this, HateResultActivity::class.java)
             intent.putExtra("people", people)
@@ -112,6 +94,7 @@ class HateCalculatorActivity : AppCompatActivity() {
             if(receipt_sum_hate.text.toString() == ""){
                 receipt_sum_hate.setError("영수증에 찍힌 금액을 입력해주세요")
             }
+
 
             Toast.makeText(
                 this@HateCalculatorActivity,

@@ -37,7 +37,6 @@ class HateResultActivity : AppCompatActivity() {
 
     }
 
-
     fun onClickHomeButton(view : View) {
        startActivity(Intent(this, MainActivity::class.java))
     }
