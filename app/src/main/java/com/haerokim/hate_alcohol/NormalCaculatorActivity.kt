@@ -1,9 +1,11 @@
 package com.haerokim.hate_alcohol
 
+import android.app.ProgressDialog.show
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -61,7 +63,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) =
-                if (total_sum_edit_text.text.toString() != "") {
+                if (total_sum_edit_text.text?.length != 0) {
                     total = Integer.parseInt(total_sum_edit_text.text.toString())
                     total /= people
                     sum_text_view.text = total.toString() + "원"
@@ -77,7 +79,6 @@ class NormalCaculatorActivity : AppCompatActivity() {
         var clipData: ClipData
 
         sum_text_view.setOnClickListener {
-
             if(sum_text_view.text.toString() == "0원"){
                 total_sum_edit_text.setError("금액을 입력해주세요")
                 Toast.makeText(
@@ -94,6 +95,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
 
                 Snackbar.make(normal_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
                     .setAction("저장", SaveButtonListener(result))
+                    .setActionTextColor(Color.parseColor("#ffffff"))
                     .show()
             }
         }

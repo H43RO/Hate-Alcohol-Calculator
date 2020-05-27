@@ -74,8 +74,6 @@ class MainActivity : AppCompatActivity() {
             viewAdapter.notifyDataSetChanged()
         }
 
-
-
         storeList = Paper.book().read("data", mutableListOf<Result>())
         viewAdapter = RecyclerAdapter(storeList)
 

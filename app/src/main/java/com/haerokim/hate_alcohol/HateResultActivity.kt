@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -86,6 +87,7 @@ class HateResultActivity : AppCompatActivity() {
 
             Snackbar.make(hate_result_layout, "복사되었습니다!", Snackbar.LENGTH_LONG)
                 .setAction("저장", SaveButtonListener(result))
+                .setActionTextColor(Color.parseColor("#ffffff"))
                 .show()
         }
 

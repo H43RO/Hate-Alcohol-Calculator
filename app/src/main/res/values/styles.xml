@@ -16,7 +16,10 @@
     </style>
 
     <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
-        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorPrimary">#FF1A1A1A</item>
+        <item name="colorControlNormal">#727272</item>
+        <item name="android:textColorHighlight">#3F3F3F</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 
