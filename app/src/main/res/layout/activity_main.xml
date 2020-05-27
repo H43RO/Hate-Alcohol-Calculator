@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:padding="24dp"
         android:gravity="center_vertical"
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -17,6 +16,7 @@
         android:background="#424C6A" >
 
         <TextView
+            android:layout_marginLeft="24dp"
             android:id="@+id/text1"
             android:layout_width="match_parent"
             android:textStyle="bold"
@@ -26,17 +26,17 @@
             android:textSize="30dp" />
 
         <TextView
+            android:layout_marginLeft="24dp"
+            android:id="@+id/text_sub"
             android:textSize="18dp"
             android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text1"
             android:text="마시지도 않았는데 다 낼 필요가 있을까요?"
             android:textColor="#B3B3B3" />
 
     </RelativeLayout>
-
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/goto_normal_calc"

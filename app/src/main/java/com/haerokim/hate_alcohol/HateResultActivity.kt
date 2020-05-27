@@ -37,7 +37,6 @@ class HateResultActivity : AppCompatActivity() {
             intent.putExtra("hate_result", result)
             startActivity(intent)
         }
-
     }
 
     //저장 동작 없이 홈 화면으로 이동하기 위한 Floating Action Button onClickListener
