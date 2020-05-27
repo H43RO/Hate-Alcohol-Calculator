@@ -3,17 +3,13 @@ package com.haerokim.hate_alcohol
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_hate_calculator.*
 import kotlinx.android.synthetic.main.activity_hate_calculator.count_member
-import kotlinx.android.synthetic.main.activity_normal_caculator.*
 
 class HateCalculatorActivity : AppCompatActivity() {
-
     var people = 0
     var soju_sum: Int = 0
     var beer_sum: Int = 0
@@ -38,7 +34,6 @@ class HateCalculatorActivity : AppCompatActivity() {
 
         Toast.makeText(this,"정보를 모두 입력해주세요",Toast.LENGTH_LONG).show()
 
-
         //술자리에 참여한 사람이 몇명인지 얻기 위한 SeekBar
 
         seekBar_hate.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -53,9 +48,7 @@ class HateCalculatorActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
             }
         })
-
     }
-
 
     //최종 결과 페이지로 이동하는 Floating Action Button onCLickListener
 
@@ -63,7 +56,6 @@ class HateCalculatorActivity : AppCompatActivity() {
         soju_sum = soju_picker.value
         beer_sum = beer_picker.value
         somek_sum = somek_picker.value
-
 
         //만약 정보가 하나라도 기입되지 않았다면 EditText setError 발생
 
@@ -105,7 +97,6 @@ class HateCalculatorActivity : AppCompatActivity() {
             if(receipt_sum_hate.text.toString() == ""){
                 receipt_sum_hate.setError("영수증에 찍힌 금액을 입력해주세요")
             }
-
 
             Toast.makeText(
                 this@HateCalculatorActivity,

@@ -99,7 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:gravity="center"
-                    android:text="결과를 터치하면 복사할 수 있습니다"
+                    android:text="결과를 터치하면 저장할 수 있습니다"
                     android:textColor="#ffffff"
                     android:textSize="15dp" />
 

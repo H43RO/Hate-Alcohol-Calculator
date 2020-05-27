@@ -263,6 +263,7 @@
                 android:paddingRight="8dp">
 
                 <NumberPicker
+                    style="@style/AppTheme.Picker"
                     android:id="@+id/soju_picker"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
@@ -271,7 +272,7 @@
                     android:layout_weight="1" />
 
                 <NumberPicker
-
+                    style="@style/AppTheme.Picker"
                     android:id="@+id/beer_picker"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
@@ -280,7 +281,7 @@
                     android:layout_weight="1" />
 
                 <NumberPicker
-
+                    style="@style/AppTheme.Picker"
                     android:id="@+id/somek_picker"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
