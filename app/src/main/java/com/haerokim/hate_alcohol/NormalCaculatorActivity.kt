@@ -22,7 +22,6 @@ class NormalCaculatorActivity : AppCompatActivity() {
     var people = 2
     var total: Int = 1000
 
-
     //SnackBar ActionButton Listener - Saving result at MainActivity
 
     inner class SaveButtonListener(val result : String ) : View.OnClickListener{
@@ -63,7 +62,7 @@ class NormalCaculatorActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) =
-                if (total_sum_edit_text.text?.length != 0) {
+                if (total_sum_edit_text.text?.length != 0) { //강제종료 현상 방지
                     total = Integer.parseInt(total_sum_edit_text.text.toString())
                     total /= people
                     sum_text_view.text = total.toString() + "원"
