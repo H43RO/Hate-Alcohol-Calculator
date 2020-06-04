@@ -23,7 +23,7 @@
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="한가지 명심하세요."
+            android:text="한가지 명심하세요!"
             android:textColor="#ffffff"
             android:textSize="30dp"
             android:textStyle="bold" />
