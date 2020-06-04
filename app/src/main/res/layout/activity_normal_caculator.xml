@@ -13,15 +13,14 @@
         android:id="@+id/normal_title"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#424C6A"
+        android:background="#FF424242"
         android:gravity="center_vertical"
-        android:padding="24dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:textStyle="bold"
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,97 +32,84 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title_text"
-            android:layout_marginTop="8dp"
-            android:text="그냥 인원수 대로 술값을 N빵 합니다."
+            android:text="간편하게 술값을 N빵 합니다"
             android:textColor="#C0C0C0"
-            android:textSize="18dp" />
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/section1"
+    <SeekBar
+        android:id="@+id/seekBar"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#ffffff"
-        android:elevation="8dp"
-        app:cardCornerRadius="4dp"
-        app:layout_constraintTop_toBottomOf="@+id/normal_title">
+        android:layout_marginEnd="8dp"
+        android:max="30"
+        android:min="2"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
 
-        <RelativeLayout
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="술자리 참가 인원 : "
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normal_title" />
+
+    <TextView
+        android:id="@+id/count_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="0명"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/normal_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/total_sum_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/total_sum_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:hint="총 계산 금액 입력"
+            android:inputType="number"
+            android:background="#E2E2E2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
-
-            <TextView
-                android:id="@+id/text_people"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="술자리 참가 인원 : "
-                android:textSize="15dp" />
-
-            <TextView
-                android:textStyle="bold"
-                android:id="@+id/count_member"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_toRightOf="@+id/text_people"
-                android:text="0명"
-                android:textSize="15dp" />
-
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_people"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="18dp"
-                android:max="20"
-                android:min="2" />
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_anju"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/seekBar"
-                android:layout_marginTop="16dp"
-                app:boxBackgroundColor="#F6F6F6"
-                app:boxStrokeColor="#6B6B6B"
-                app:boxStrokeErrorColor="@color/errorStroke"
-                app:errorIconDrawable="@drawable/ic_error_black_24dp"
-                app:errorIconTintMode="multiply">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/total_sum_edit_text"
-                    android:layout_width="match_parent"
-                    android:inputType="number"
-                    android:layout_height="match_parent"
-                    android:hint="영수증에 찍힌 총 금액을 입력하세요" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </RelativeLayout>
-
-    </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="198dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:elevation="8dp"
         app:cardCornerRadius="4dp"
-        app:layout_constraintTop_toBottomOf="@+id/section1">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_sum_input">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -133,21 +119,19 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center_horizontal"
                 android:text="인당"
                 android:textSize="30dp" />
 
             <TextView
-                android:layout_marginTop="16dp"
                 android:id="@+id/sum_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
                 android:text="0원"
-                android:textColor="#3A3A3A"
                 android:textSize="60dp"
                 android:textStyle="bold" />
 
@@ -155,21 +139,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/sum_text_view"
-                android:background="#8E95AB"
+                android:layout_marginTop="16dp"
+                android:background="#626262"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:padding="8dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:gravity="center"
-                    android:text="결과를 터치하면 저장할 수 있습니다"
+                    android:gravity="center_horizontal"
+                    android:text="결과를 터치하면 복사할 수 있습니다"
                     android:textColor="#ffffff"
                     android:textSize="15dp" />
 
 
             </LinearLayout>
+
+
         </RelativeLayout>
+
+
     </com.google.android.material.card.MaterialCardView>
 
 
