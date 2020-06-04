@@ -127,7 +127,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="술찌들의 술값 계산을 합니다."
+                    android:text="술찌들의 공정한 술값 계산을 합니다."
                     android:textColor="#ffffff" />
 
             </LinearLayout>
